@@ -66,6 +66,7 @@ exec --no-startup-id wal -R
 #exec dunst 
 exec --no-startup-id picom --shadow --shadow-exclude 'class_g = "Polybar"' --round-borders 3 --corner-radius 3 --vsync
 
+exec --no-startup-id dunst
 #exec --no-startup-id picom -f -D 3 -b --corner-radius 3 --vsync -c
 #exec oneko -time 100000 -rv -tofocus --no-startup-id
 exec --no-startup-id polybar --config=.config/polybar/config.ini example
@@ -84,7 +85,7 @@ exec --no-startup-id polybar --config=.config/polybar/config.ini example
 #
 
 #bindsym $mod+s exec /home/joel/scripts/sys
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_extended_run
 #bindsym $mod+d exec /home/topaz/scripts/pkg-launcher
 bindsym $mod+Return exec terminator
 
