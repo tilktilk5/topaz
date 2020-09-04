@@ -2,7 +2,10 @@
 # Joel's config for TOPAZ shell
 #
 
-
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
 
 # Enable colors and change prompt
 autoload -U colors && colors
@@ -33,7 +36,7 @@ lfcd () {
     fi
 }
 bindkey -s '^o' 'lfcd\n'
-
+bindkey '^ ' autosuggest-accept
 
 # Alias
 alias list='exa -lha --group-directories-first'
@@ -54,6 +57,7 @@ zle -N down-line-or-beginning-search
 [[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
 [[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
 
+source /home/joel/dl/git/clones/external/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null

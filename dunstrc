@@ -86,7 +86,7 @@
 
     ### Text ###
 
-    font = Monospace 8
+    font = Inconsolata 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -312,6 +312,12 @@
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon
+
+[play_sound]
+    appname = Slack
+    summary = "*"
+    script = /home/joel/.scripts/alert.sh
+
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
